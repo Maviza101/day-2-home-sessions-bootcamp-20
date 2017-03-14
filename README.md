@@ -3,6 +3,7 @@
 ```bash
 git clone https://github.com/Maviza101/day-1-home-sessions-bootcamp-20.git
 ```
+* Install Node JS. Full instructions can be found [here](https://nodejs.org/en/download/).
 * Open a terminal and `cd` (i.e navigate) into the directory of the repo you cloned above.
 * Enter this command:
 ```bash
