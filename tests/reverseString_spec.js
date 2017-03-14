@@ -3,7 +3,7 @@
 describe("Produce the reverse order of a word: ", function() {
   var myApp = require("../app/reverseString.js");
   var reverseString = myApp.reverseString;
-  
+
   describe("Check that function accepts only strings", function() {
     it("should return `Argument is not a string` for 31", function() {
       expect(reverseString(31)).toEqual('Argument is not a string');
@@ -37,7 +37,7 @@ describe("Produce the reverse order of a word: ", function() {
     });
     
     it("should return `Argument is not a string` for regex /[a-z]/", function() {
-      expect(reverseString([a-z])).toEqual('Argument is not a string');
+      expect(reverseString(/[a-z]/)).toEqual('Argument is not a string');
     });
   });
 
@@ -61,7 +61,7 @@ describe("Produce the reverse order of a word: ", function() {
     });
 
     it("should return true for `this way yaw sith`", function() {
-      expect(reverseString('this way yaw sith')).toEqual(true);
+      expect(reverseString('this way yaw siht')).toEqual(true);
     });
   });
 
