@@ -1,6 +1,9 @@
 'use strict';
 
 describe("Produce the reverse order of a word: ", function() {
+  var myApp = require("../app/reverseString.js");
+  var reverseString = myApp.reverseString;
+  
   describe("Check that function accepts only strings", function() {
     it("should return `Argument is not a string` for 31", function() {
       expect(reverseString(31)).toEqual('Argument is not a string');
