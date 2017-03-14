@@ -1,7 +1,7 @@
 {
   "name": "day-2-home-sessions-bootcamp-20",
   "version": "1.0.0",
-  "description": "Implementation of word() and reverseString().",
+  "description": "A simple console app that consumes the Search endpoint of Spotify's Web API",
   "directories": {
     "test": "tests"
   },
