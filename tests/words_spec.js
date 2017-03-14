@@ -1,5 +1,8 @@
 'use strict';
 
+var myApp = require("../app/words.js");
+var words = myApp.words;
+
 describe("words()", function() {
   it("counts one word", function() {
     var expectedCounts = { word: 1 };
