@@ -12,4 +12,4 @@ npm test
 
 ## Adding your own tests
 * Just add them under the `tests` directory and save them with the format `someFunctionality_spec.js`.
-* Run `npm` tests again and it will all tests, both new and old.
+* Run `npm tests` again and it will run all tests, both new and old.
