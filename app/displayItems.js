@@ -22,19 +22,15 @@ module.exports.displayItems = function(obj, itemsKey) {
   }
 
   var statusMessge = 'ff';
-  var output = '';
   var items = obj[itemsKey].items;
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
     // Responses for albums, playlists and tracks don't have followers and popularity.
     var itemDetails = 'Name: ' + item.name + '\n' +
-          'Type: ' + item.type + '\n' + 
           'Followers: ' + item.followers.total + '\n' + 
           'Popularity: ' + item.popularity + '\n' +
           'Spotify URL: ' + item.external_urls.spotify + '\n' + 
           '\n';
-    output += itemDetails;
+    console.log(itemDetails);
   }
-
-  return output;
 }
