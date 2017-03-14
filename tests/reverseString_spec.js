@@ -66,6 +66,10 @@ describe("Produce the reverse order of a word: ", function() {
   });
 
   describe("Case for normal words", function() {
+    it("should return `a` for `a`", function() {
+      expect(reverseString('a')).toEqual('a');
+    });
+
     it("should return `skoob` for `books`", function() {
       expect(reverseString('books')).toEqual('skoob');
     });
