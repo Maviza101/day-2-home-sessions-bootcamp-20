@@ -28,11 +28,11 @@ describe("Unit Tests for displayItems()", function() {
 		});
 		
 		it("should return `Argument must not be null` for null", function() {
-			expect(displayItems([])).toEqual("Argument must not be null");
+			expect(displayItems(null)).toEqual("Argument must not be null");
 		});
 		
-		it("should return `Object argument must not be empty` for []", function() {
-			expect(displayItems([])).toEqual("Object argument must not be empty");
+		it("should return `Object argument must not be empty` for {}", function() {
+			expect(displayItems({})).toEqual("Object argument must not be empty");
 		});
 	});
 });
