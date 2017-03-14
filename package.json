@@ -1,7 +1,7 @@
 {
   "name": "day-2-home-sessions-bootcamp-20",
   "version": "1.0.0",
-  "description": "A simple console app that consumes the Search endpoint of Spotify's Web API",
+  "description": "A simple console app that consumes the Search endpoint of Spotify's Web API using Unirest.",
   "directories": {
     "test": "tests"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Maviza101/day-2-home-sessions-bootcamp-20",
   "dependencies": {
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "unirest": "^0.5.1"
   }
 }
