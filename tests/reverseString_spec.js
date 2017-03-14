@@ -1,3 +1,5 @@
+'use strict';
+
 describe("Produce the reverse order of a word: ", function() {
   describe("Check that function accepts only strings", function() {
     it("should return `Argument is not a string` for 31", function() {
