@@ -34,5 +34,5 @@ spotify-artists lecrae -n 4
 ```
 
 ## Adding your own tests
-* Just add them under the `tests` directory and save them with the format `someFunctionality_spec.js`.
+* Just add them under the `tests` directory and save them with the format `someFunctionalitySpec.js`.
 * Run `npm` tests again and it will all tests, both new and old.
