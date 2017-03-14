@@ -1,6 +1,8 @@
 'use strict';
 
 describe("Unit Tests for displayItems()", function() {
+	var myApp = require('../app/displayItems.js');
+	var displayItems = myApp.displayItems;
 	describe("Test that it accepts only valid arguments", function() {
 		it("should return `Argument is not an object` for []", function() {
 			expect(displayItems([])).toEqual("Argument is not an object");
