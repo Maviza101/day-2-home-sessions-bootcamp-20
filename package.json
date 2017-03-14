@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Maviza101/day-2-home-sessions-bootcamp-20",
   "dependencies": {
+    "commander": "^2.9.0",
     "jasmine": "^2.4.1",
     "unirest": "^0.5.1"
   }
