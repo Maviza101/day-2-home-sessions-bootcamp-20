@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = require("../app/words.js");
+var myApp = require("../app/words/words.js");
 var words = myApp.words;
 
 describe("Words Counting Functionality", function() {
