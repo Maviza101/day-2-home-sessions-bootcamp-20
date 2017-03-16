@@ -8,17 +8,14 @@ var itemsPerQuery = 10;
 // To the user, the logical option is 1-based page numbers. But the API requires 0-based page numbers.
 var pageNum = 0;
 
-var displayItems = require('../app/displayItems.js').displayItems;
+var displayItems = require('../spotify-artists/displayItems.js').displayItems;
 var program = require('commander');
 try {
   program
     .arguments('<searchTerm>')
-    .option('-p, --per-page <perPage>', 'Number of search results you want to see per page. Default is ' + itemsPerQuery + '.')
-    .option('-n, --page-number <pageNumber>', 'Page number of results you want to see. Default is 1.')
+    .option('-p, --per-page [perPage]', 'Number of search results you want to see per page. Default is ' + itemsPerQuery + '.')
+    .option('-n, --page-number [pageNumber]', 'Page number of results you want to see. Default is 1.')
     .action(function(searchTerm) {
-      console.log('page#: %s term: %s per page: %s',
-          program.pageNumber, searchTerm, program.perPage);
-
       if (searchTerm == '' || searchTerm == undefined) {
         console.log('Error. No search term given.');
         return;
@@ -32,7 +29,7 @@ try {
         itemsPerQuery = tempItemsPerQuery;
       }
       else {
-        console.log('Invalid results per page. Using default...');
+        console.log('No valid results per page supplied. Using default...');
       }
 
       var tempPageNumber = Number.parseInt(program.pageNumber);
@@ -40,10 +37,8 @@ try {
         pageNum = tempPageNumber - 1;
       }
       else {
-        console.log('Invalid page number. Using default...');
+        console.log('No valid page number supplied. Using default...');
       }
-      console.log('pn#: %s st: %s pp: %s',
-          pageNum, term, itemsPerQuery);
     })
     .parse(process.argv);
 }
