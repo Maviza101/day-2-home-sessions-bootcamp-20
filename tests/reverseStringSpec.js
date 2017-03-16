@@ -1,7 +1,7 @@
 'use strict';
 
 describe("Produce the reverse order of a word: ", function() {
-  var myApp = require("../app/reverseString.js");
+  var myApp = require("../app/reverseString/reverseString.js");
   var reverseString = myApp.reverseString;
 
   describe("Check that function accepts only strings", function() {
