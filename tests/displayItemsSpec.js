@@ -1,7 +1,7 @@
 'use strict';
 
 describe("Unit Tests for displayItems()", function() {
-	var myApp = require('../app/displayItems.js');
+	var myApp = require('../app/spotify-artists/displayItems.js');
 	var displayItems = myApp.displayItems;
 	var itemsKey = 'artists';
 	var itemsObj = {
