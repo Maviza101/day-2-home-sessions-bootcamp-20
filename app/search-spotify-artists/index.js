@@ -8,7 +8,7 @@ var itemsPerQuery = 10;
 // To the user, the logical option is 1-based page numbers. But the API requires 0-based page numbers.
 var pageNum = 0;
 
-var displayItems = require('../spotify-artists/displayItems.js').displayItems;
+var displayItems = require('../search-spotify-artists/displayItems.js').displayItems;
 var program = require('commander');
 try {
   program
@@ -44,7 +44,7 @@ try {
 }
 catch (e) {
   console.log('Invalid arguments. Please correct them and try again. \n' + 
-    'You can also type "spotify-artists --help" for more info.');
+    'You can also type "search-spotify-artists --help" for more info.');
   return;
 }
 
@@ -72,10 +72,10 @@ unirest.get(
     }
     else if (Math.trunc(response.status / 100 ) == 4) {
       console.log('The request was unsuccessful due to an invalid command. Please correct it and try again. \n' + 
-        'You can also type "spotify-artists --help" for more info.');
+        'You can also type "search-spotify-artists --help" for more info.');
     }
     else {
       console.log('The request was not successful. Please check your network connection and try again. \n\n' + 
-        'You can also type "spotify-artists --help" for more info.');
+        'You can also type "search-spotify-artists --help" for more info.');
     }
 });
