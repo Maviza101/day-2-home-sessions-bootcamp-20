@@ -2,12 +2,12 @@
   "name": "day-2-home-sessions-bootcamp-20",
   "version": "1.0.0",
   "description": "A simple console app that consumes the Search endpoint of Spotify's Web API using Unirest.",
-  "main": "./app/spotify-artists/index.js",
+  "main": "./app/search-spotify-artists/index.js",
   "directories": {
     "test": "tests"
   },
   "bin": {
-    "spotify-artists": "./app/spotify-artists/index.js"
+    "search-spotify-artists": "./app/search-spotify-artists/index.js"
   },
   "scripts": {
     "test": "jasmine tests/*[sS]pec.js"
