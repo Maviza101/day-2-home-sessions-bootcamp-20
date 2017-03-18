@@ -8,7 +8,7 @@ var itemsPerQuery = 10;
 // To the user, the logical option is 1-based page numbers. But the API requires 0-based page numbers.
 var pageNum = 0;
 
-var displayItems = require('./search-spotify-artists/displayItems.js').displayItems;
+var displayItems = require('./displayItems').displayItems;
 var program = require('commander');
 try {
   program
