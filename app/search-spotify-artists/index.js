@@ -2,14 +2,16 @@
 
 'use strict';
 
+var displayItems = require('./displayItems').displayItems;
+var program = require('commander');
+var unirest = require('unirest');
+
 var SEARCH_TYPE = 'artist';
 var term = '';
 var itemsPerQuery = 10;
 // To the user, the logical option is 1-based page numbers. But the API requires 0-based page numbers.
 var pageNum = 0;
 
-var displayItems = require('./displayItems').displayItems;
-var program = require('commander');
 try {
   // TODO: Find a way to bypass commander's auto usage of the current file's name at the 
   // start of the usage text below.
@@ -70,14 +72,12 @@ catch (e) {
   return;
 }
 
-var unirest = require('unirest');
-unirest.get(
-    'https://api.spotify.com/v1/search?' + 
+var urlToQuery = 'https://api.spotify.com/v1/search?' + 
     'q=' + term + 
     '&type=' + SEARCH_TYPE + 
     '&limit=' + itemsPerQuery + 
-    '&offset=' + pageNum
-  )
+    '&offset=' + pageNum;
+unirest.get(urlToQuery)
 	.headers({'Accept': 'application/json', 'Content-Type': 'application/json'})
 	.end(function (response) {
     // Result will contain 'artists', not 'artist'.
